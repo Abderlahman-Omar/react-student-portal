@@ -801,10 +801,10 @@ export default function Home() {
                 <div className="bg-blue-600 ">
                     <div className=" w-full md:min-h-custom-height h-96 ">
                         <div className="flex flex-col">
-                            <div className="flex flex-row justify-center">
-                                <div className="flex flex-col md:-translate-x-52 -translate-x-16  ">
-                                    <div className="flex flex-row justify-center">
-                                        <span className="text-white font-light md:text-4xl text-xl">
+                            <div className="flex gap-8 justify-center mb-16">
+                                <div className="flex flex-col justify-between   ">
+                                    <div className="flex  justify-center">
+                                        <span className="text-white font-light  md:text-4xl text-xl">
                                             {t("hello")}
                                         </span>
                                         <span className="text-white md:ml-5 ml-2 font-bold md:text-4xl text-xl">
@@ -812,10 +812,10 @@ export default function Home() {
                                         </span>
                                     </div>
 
-                                    <span className="text-white font-light md:text-4xl text-xl translate-y-5 ">
+                                    <span className="text-white font-light md:text-4xl text-xl  ">
                                         {t("classLocation")}
                                     </span>
-                                    <div className="bg-white flex justify-center rounded-full translate-y-12 ">
+                                    <div className="bg-white flex justify-center items-center rounded-full ">
                                         <span className="text-gray-400 font-extralight md:text-4xl text-xl">
                                             {t("schoolYear")}
                                         </span>
@@ -825,12 +825,12 @@ export default function Home() {
                                     onClick={() => {
                                         navigate("/profile");
                                     }}
-                                    className="md:w-44 w-28 md:h-44 h-28 cursor-pointer rounded-full object-cover md:translate-x-32 translate-x-10 "
+                                    className="md:w-40 w-28 md:h-40 h-28 cursor-pointer rounded-full object-cover  "
                                     src="src/assets/images/student_profile.jpeg"
                                     alt="Student Profile"
                                 />
                             </div>
-                            <div className="flex flex-row justify-evenly translate-y-20">
+                            <div className="flex flex-row justify-evenly">
                                 <div className="bg-white md:w-96 w-48 md:h-32 h-32 rounded-3xl justify-around flex flex-col ">
                                     <span className="flex justify-center md:text-4xl text-3xl text-black font-bold ">
                                         {t("attendance")}
@@ -850,15 +850,15 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full bg-white min-h-screen md:rounded-t-4xl rounded-t-4xl  ">
-                        <div className=" grid md:grid-cols-3 lg:grid-cols-4 gap-x-0 grid-cols-2 gap-y-4 lg:gap-4 md:-translate-x-0 -translate-x-8  ">
+                    <div className="w-full bg-white min-h-screen md:rounded-t-4xl rounded-t-4xl pt-10  ">
+                        <div className=" grid md:grid-cols-3 lg:grid-cols-4 lg:pl-4 lg:pr-4 gap-x-0 grid-cols-2 gap-y-4 lg:gap-4 justify-items-center  ">
                             {cardItems.map((item) => (
                                 <div key={item.id}>
                                     <div
                                         onClick={() => {
                                             navigate(item.onClick);
                                         }}
-                                        className="flex flex-col  items-center justify-around cursor-pointer  lg:w-56 w-36 lg:h-48 h-32 bg-blue-600 rounded-3xl translate-x-20 translate-y-20"
+                                        className="flex flex-col  items-center justify-around cursor-pointer  lg:w-56 w-36 lg:h-48 h-32 bg-blue-600 rounded-3xl translate-x-0 translate-y-0"
                                     >
                                         {item.icon}
                                         <span className="text-white flex justify-center   md:text-2xl text-lg">

@@ -37,56 +37,58 @@ export default function SplashPage() {
             <div className="bg-blue-600 w-screen h-screen">
                 <div className="flex justify-center items-center min-h-screen">
                     <div className="flex flex-col">
-                        <div className="flex justify-center">
-                            <button
-                                id="dropdownDefaultButton"
-                                data-dropdown-toggle="dropdown"
-                                className="text-black bg-white hover:text-black font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                type="button"
-                                onClick={toggleDropdown}
-                            >
-                                {t("Change Language")}
-                                <svg
-                                    className="w-2.5 h-2.5 ms-3"
-                                    aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 10 6"
+                        <div className="flex justify-center mb-8">
+                            <div className="relative inline-block">
+                                <button
+                                    id="dropdownDefaultButton"
+                                    data-dropdown-toggle="dropdown"
+                                    className="text-black bg-white hover:text-black font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                    type="button"
+                                    onClick={toggleDropdown}
                                 >
-                                    <path
-                                        stroke="currentColor"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="m1 1 4 4 4-4"
-                                    />
-                                </svg>
-                            </button>
-                            {/* Dropdown menu */}
-                            <div
-                                id="dropdown"
-                                className={`z-10 ${
-                                    isDropdownOpen ? "block" : "hidden"
-                                } bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}
-                            >
-                                <ul
-                                    className="py-2 cursor-pointer text-sm text-gray-700 dark:text-gray-200"
-                                    aria-labelledby="dropdownDefaultButton"
+                                    {t("Change Language")}
+                                    <svg
+                                        className="w-2.5 h-2.5 ms-3"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                    >
+                                        <path
+                                            stroke="currentColor"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="m1 1 4 4 4-4"
+                                        />
+                                    </svg>
+                                </button>
+                                {/* Dropdown menu */}
+                                <div
+                                    id="dropdown"
+                                    className={`absolute left-0 mt-2 z-10 ${
+                                        isDropdownOpen ? "block" : "hidden"
+                                    } bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}
                                 >
-                                    {isLTR ? (
-                                        <li onClick={changeAr}>
-                                            <a className="ml-16  ">
-                                                {t("Arabic")}
-                                            </a>
-                                        </li>
-                                    ) : (
-                                        <li onClick={changeEn}>
-                                            <a className="mr-16  ">
-                                                {t("English")}
-                                            </a>
-                                        </li>
-                                    )}
-                                </ul>
+                                    <ul
+                                        className="py-2 cursor-pointer text-sm text-gray-700 dark:text-gray-200"
+                                        aria-labelledby="dropdownDefaultButton"
+                                    >
+                                        {isLTR ? (
+                                            <li onClick={changeAr}>
+                                                <a className="ml-16">
+                                                    {t("Arabic")}
+                                                </a>
+                                            </li>
+                                        ) : (
+                                            <li onClick={changeEn}>
+                                                <a className="mr-16">
+                                                    {t("English")}
+                                                </a>
+                                            </li>
+                                        )}
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div className="flex flex-row ">

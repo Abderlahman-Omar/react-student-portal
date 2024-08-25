@@ -449,25 +449,21 @@ export default function ProfilePage() {
         <>
             <div>
                 <div className="bg-blue-600 w-full  h-72 md:h-96 rounded-b-4xl">
-                    <div className="flex flex-col">
-                        <div className="flex flex-row justify-center pt-20 md:pt-32">
+                    <div className="flex flex-col ">
+                        <div className="flex  gap-8 justify-center pt-20 md:pt-32">
                             <img
-                                className="md:w-32 w-28 md:h-32 h-28 cursor-pointer rounded-full object-cover -md:translate-x-80 -translate-x-5 "
+                                className="md:w-32 w-28 md:h-32 h-28 cursor-pointer rounded-full object-cover  "
                                 src="src/assets/images/student_profile.jpeg"
                                 alt="Student Profile"
                             />
-                            <div className="flex flex-col md:translate-x-10  md:translate-y-5 translate-y-8 ">
-                                <div className="flex flex-row justify-center">
+                            <div className="flex flex-col justify-evenly ">
+                                <div className="flex  justify-center">
                                     <span className="text-white  font-bold md:text-4xl text-xl">
-                                        {t("studentFirstName")}
-                                    </span>
-
-                                    <span className="text-white md:ml-5 ml-2 font-bold md:text-4xl text-xl">
-                                        {t("studentLastName")}
+                                        {t("studentName")}
                                     </span>
                                 </div>
 
-                                <span className="text-white font-light md:text-4xl text-xl translate-y-0 ">
+                                <span className="text-white font-light md:text-4xl text-xl  ">
                                     {t("classLocation")}
                                 </span>
                             </div>
