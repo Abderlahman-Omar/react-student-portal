@@ -1,14 +1,26 @@
 import "flowbite";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+    const { t, i18n } = useTranslation();
+    const changeEn = () => {
+        i18n.changeLanguage("en");
+    };
+    const changeAr = () => {
+        i18n.changeLanguage("ar");
+    };
+    const navigate = useNavigate();
     return (
         <>
             {" "}
-            <nav className="bg-blue-600 border-gray-200 dark:bg-gray-900">
+            <nav className="bg-blue-600  border-gray-200 dark:bg-gray-900">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a
-                        href="#"
-                        className="flex items-center space-x-3 rtl:space-x-reverse"
+                        className="flex cursor-pointer items-center space-x-3 rtl:space-x-reverse"
+                        onClick={() => {
+                            navigate("/home");
+                        }}
                     >
                         <img
                             src="src\assets\images\splash.png"
@@ -16,7 +28,7 @@ export default function Navbar() {
                             alt="Flowbite Logo"
                         />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-white">
-                            Student Portal
+                            {t("title")}
                         </span>
                     </a>
                     <button
@@ -47,12 +59,14 @@ export default function Navbar() {
                         className="hidden w-full md:block md:w-auto"
                         id="navbar-default"
                     >
-                        <ul className="font-medium flex flex-col p-4 md:p-0 mt-4  rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-blue-600 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <ul className="font-medium flex flex-col  p-4 md:p-0 mt-4  rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-blue-600 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                             <li>
                                 <a
-                                    href="#"
-                                    className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-white  md:hover:text-black hover:text-black"
+                                    className="block py-2 px-3 cursor-pointer text-white bg-blue-700 rounded md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-white  md:hover:text-black hover:text-black"
                                     aria-current="page"
+                                    onClick={() => {
+                                        navigate("/home");
+                                    }}
                                 >
                                     Home
                                 </a>
@@ -71,22 +85,6 @@ export default function Navbar() {
                                     className="block py-2 px-3   text-white rounded hover:text-black md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                                 >
                                     Contact
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="block py-2 px-3   text-white rounded hover:text-black md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                >
-                                    Privacy Policy
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="block py-2 px-3   text-white rounded hover:text-black md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                >
-                                    Licensing
                                 </a>
                             </li>
                         </ul>

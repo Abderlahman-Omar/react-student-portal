@@ -1,0 +1,8 @@
+/* styles.css */
+body {
+    direction: ltr; /* default direction */
+}
+
+[dir="rtl"] {
+    direction: rtl;
+}

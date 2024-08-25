@@ -1,7 +1,9 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home Page/Home";
-import NotFound from "./components/NotFound/NotFound";
+import NotFound from "./pages/NotFound/NotFound";
+import { LayoutProvider } from "./Layout";
+
 const routes = createBrowserRouter([
     {
         path: "/",
@@ -14,7 +16,11 @@ const routes = createBrowserRouter([
     { path: "*", element: <NotFound /> },
 ]);
 function App() {
-    return <RouterProvider router={routes} />;
+    return (
+        <LayoutProvider>
+            <RouterProvider router={routes} />
+        </LayoutProvider>
+    );
 }
 
 export default App;
