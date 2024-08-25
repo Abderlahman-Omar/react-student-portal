@@ -49,7 +49,7 @@ export default function Results() {
                 <div className="flex flex-col bg-blue-600">
                     <div className="bg-blue-600 w-full h-20"></div>
                     <div className="bg-white rounded-t-4xl w-full h-screen">
-                        <div className="grid md:grid-cols-2 grid-cols-1 gap-y-4 justify-center md:pt-20 pt-10">
+                        <div className="grid lg:grid-cols-2 md:grid-cols-1  sm:grid-cols-1 gap-y-4 justify-center md:pt-20 pt-10">
                             {cardItems.map((card) => (
                                 <div key={card.id} className="mx-auto">
                                     {" "}

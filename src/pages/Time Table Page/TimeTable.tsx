@@ -49,7 +49,7 @@ export default function TimeTable() {
             <div className="bg-blue-600 w-full h-screen overflow-y-auto">
                 {" "}
                 {/* Added overflow-hidden here */}
-                <div className="grid md:grid-cols-2 grid-cols-1 gap-y-4 justify-center md:pt-20 pt-10">
+                <div className="grid lg:grid-cols-2 md:grid-cols-1  sm:grid-cols-1 gap-y-4 justify-center md:pt-20 pt-10">
                     {cardItems.map((card) => (
                         <div key={card.id} className="mx-auto">
                             {" "}
