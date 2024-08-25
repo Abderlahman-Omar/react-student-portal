@@ -17,7 +17,7 @@
     "year": "Fourth Year",
     "semister": "First Semister",
     "loginTitle1": "Hi ",
-    "hi": "Hi ",
+    "Hi": "Hi ",
     "signIn": "Sign In to continue",
     "loginInput1": "Email / Mobile Number",
     "loginInput2": "Password",
@@ -79,5 +79,9 @@
     "scoreTitle": "Score :",
     "score": "90/100",
     "gradeTitle": "Grade :",
-    "grade": "Excellent"
+    "grade": "Excellent",
+    "Home": "Home",
+    "About": "About",
+    "Contact Us": "Contact Us",
+    "hello":"Hi"
 }

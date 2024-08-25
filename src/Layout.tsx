@@ -1,5 +1,6 @@
 // LayoutContext.tsx
 import React, { createContext, useState, ReactNode } from "react";
+import { Outlet } from "react-router-dom";
 
 type LayoutDirection = "ltr" | "rtl";
 
@@ -18,6 +19,7 @@ export const LayoutProvider: React.FC<{ children: ReactNode }> = ({
     return (
         <LayoutContext.Provider value={{ direction, setDirection }}>
             <div style={{ direction }}>{children}</div>
+            <Outlet />
         </LayoutContext.Provider>
     );
 };

@@ -13,9 +13,8 @@ export default function Navbar() {
     const navigate = useNavigate();
     return (
         <>
-            {" "}
-            <nav className="bg-blue-600  border-gray-200 dark:bg-gray-900">
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            {/* <nav className="bg-blue-600  border-gray-200 dark:bg-gray-900">
+                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
                     <a
                         className="flex cursor-pointer items-center space-x-3 rtl:space-x-reverse"
                         onClick={() => {
@@ -59,7 +58,7 @@ export default function Navbar() {
                         className="hidden w-full md:block md:w-auto"
                         id="navbar-default"
                     >
-                        <ul className="font-medium flex flex-col  p-4 md:p-0 mt-4  rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-blue-600 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <ul className="font-medium flex flex-col p-4 md:p-0 mt-4  rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-blue-600 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                             <li>
                                 <a
                                     className="block py-2 px-3 cursor-pointer text-white bg-blue-700 rounded md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-white  md:hover:text-black hover:text-black"
@@ -68,7 +67,16 @@ export default function Navbar() {
                                         navigate("/home");
                                     }}
                                 >
-                                    Home
+                                    {t("Home")}
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="#"
+                                    className="block py-2 px-3  text-white rounded hover:text-black md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                >
+                                    {t("About")}
                                 </a>
                             </li>
                             <li>
@@ -76,21 +84,30 @@ export default function Navbar() {
                                     href="#"
                                     className="block py-2 px-3   text-white rounded hover:text-black md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                                 >
-                                    About
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
-                                    className="block py-2 px-3   text-white rounded hover:text-black md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                                >
-                                    Contact
+                                    {t("Contact Us")}
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav> */}
+            <div className="w-full h-20 bg-blue-600">
+                <a
+                    className="flex cursor-pointer items-center space-x-3 rtl:space-x-reverse"
+                    onClick={() => {
+                        navigate("/home");
+                    }}
+                >
+                    <img
+                        src="src\assets\images\splash.png"
+                        className="h-8"
+                        alt="Flowbite Logo"
+                    />
+                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-white">
+                        {t("title")}
+                    </span>
+                </a>
+            </div>
         </>
     );
 }
