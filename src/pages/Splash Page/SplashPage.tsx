@@ -100,13 +100,13 @@ export default function SplashPage() {
                                     {t("title2")}
                                 </p>
                             </div>
-                            <div>
-                                <img
-                                    className="md:w-96 md:h-96 w-48 h-48 md:-translate-y-0 translate-y-10"
-                                    src="src\assets\images\splash.png"
-                                    alt=""
-                                />
-                            </div>
+                            {/* <div>
+                                    <img
+                                        className="md:w-96 md:h-96 w-48 h-48 md:-translate-y-0 translate-y-10"
+                                        src="src\assets\images\splash.png"
+                                        alt=""
+                                    />
+                                </div> */}
                         </div>
                         <button
                             type="button"
